@@ -1,0 +1,7 @@
+{
+  "scripts": ["index.js"],
+  "dependencies": {
+    "component/dom": "*",
+    "esundahl/animations": "*"
+  }
+}
