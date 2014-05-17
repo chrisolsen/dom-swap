@@ -1,7 +1,17 @@
 {
+  "name": "dom-swap",
+  "version": "0.1.0",
+  "description": "DOM element swapper",
+  "keywords": [
+    "dom",
+    "html",
+    "swap"
+  ],
   "scripts": ["index.js"],
   "dependencies": {
     "component/dom": "*",
     "esundahl/animations": "*"
-  }
+  },
+  "repository": "chrisolsen/dom-swap",
+  "license": "MIT"
 }
