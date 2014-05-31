@@ -26,16 +26,20 @@ module.exports = function(parentElem, selector, elem, options) {
   // prevent re-injection of the same layout
   if ($insertElem.html() === $el.html) return;
 
-  // remove previous element
+  // remove previous element and any stray children
   if ($insertElem[0].hasChildNodes()) {
-    var $elemToRemove = dom($insertElem[0].firstChild);
-    $elemToRemove
-      .removeClass('fade-in')
-      .addClass('fade-out');
+    var childNodes = [].slice.call($insertElem[0].childNodes, 0);
 
-    setTimeout(function() {
-      $elemToRemove.remove();
-    }, TRANSITION_TIME);
+    childNodes.forEach(function(elem) {
+      var $elem = dom(elem);
+      $elem
+        .removeClass('fade-in')
+        .addClass('fade-out');
+
+      setTimeout(function() {
+        $elem.remove();
+      }, TRANSITION_TIME);
+    });
   }
 
   $el
