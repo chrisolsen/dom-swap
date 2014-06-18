@@ -45,6 +45,7 @@ module.exports = function(parentElem, selector, elem, options) {
   $el
     .css(ABS_STYLE)
     .css('z-index', 2)
+    .removeClass('fade-out')
     .addClass('animated')
     .addClass('fade-in');
 
